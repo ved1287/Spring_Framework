@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context/
+  http://www.springframework.org/schema/context/spring-context.xsd">
+   
+  <bean class="com.zensar.bean.Student" id="stud1">
+  	<property name="rollNumber" value="5001"></property>
+  	<property name="name" value="Kiran"></property>
+  	<property name="rating" value="8"></property>
+  </bean>
+  
+  <bean class="com.zensar.bean.Student" id="stud2">
+  	<constructor-arg value="5002"></constructor-arg>
+  	<constructor-arg value="Jaya"></constructor-arg>
+  	<constructor-arg value="6"></constructor-arg>
+</bean>
+
+<bean class="java.lang.String" id="company">
+	<constructor-arg value="Zensar"></constructor-arg>
+</bean>
+
+<bean class="java.lang.Double" id="min-salary">
+	<constructor-arg value="20000.00"></constructor-arg>
+</bean>
+
+<bean class="java.lang.Integer" id="rollNoBean">
+	<constructor-arg value="5003"></constructor-arg>
+</bean>
+<bean class="java.lang.String" id="nameBean">
+	<constructor-arg value="Hema"></constructor-arg>
+</bean>
+<bean class="java.lang.Integer" id="ratingBean">
+	<constructor-arg value="8"></constructor-arg>
+</bean>
+
+<bean class="com.zensar.bean.Student" id="stud3">
+	<property name="rollNumber" ref="rollNoBean"></property>
+	<property name="name" ref="nameBean"></property>
+	<property name="rating" ref="ratingBean"></property>
+</bean>
+
+
+
+ 
+</beans>
